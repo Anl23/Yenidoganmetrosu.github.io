@@ -24,7 +24,6 @@ color:white;
 }
 
 
-
 /* Yan Menü */
 
 .sidebar{
@@ -150,8 +149,6 @@ cursor:pointer;
 
 border-radius:8px;
 
-margin-bottom:10px;
-
 }
 
 
@@ -168,7 +165,7 @@ background:#ff4a57;
 
 display:none;
 
-margin-top:15px;
+margin-top:20px;
 
 }
 
@@ -503,6 +500,17 @@ menu.style.display="block";
 
 function showPhotos(id){
 
+let selected=document.getElementById(id);
+
+
+if(selected.style.display==="block"){
+
+selected.style.display="none";
+
+return;
+
+}
+
 
 let photos=document.querySelectorAll(".photos");
 
@@ -514,11 +522,10 @@ photo.style.display="none";
 });
 
 
-document.getElementById(id).style.display="block";
+selected.style.display="block";
 
 
 }
-
 
 
 </script>
