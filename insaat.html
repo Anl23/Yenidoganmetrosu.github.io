@@ -24,7 +24,8 @@ color:white;
 }
 
 
-/* Menü */
+
+/* Yan Menü */
 
 .sidebar{
 
@@ -72,8 +73,6 @@ margin-bottom:10px;
 
 border-radius:8px;
 
-transition:.3s;
-
 }
 
 
@@ -87,36 +86,7 @@ background:#ff4a57;
 
 
 
-/* Açılır menü */
-
-
-.station-list{
-
-display:none;
-
-margin-left:15px;
-
-border-left:2px solid #555;
-
-padding-left:10px;
-
-}
-
-
-
-.station-list a{
-
-font-size:14px;
-
-padding:10px;
-
-}
-
-
-
-
 /* İçerik */
-
 
 .content{
 
@@ -125,6 +95,7 @@ margin-left:260px;
 padding:40px;
 
 }
+
 
 
 
@@ -152,56 +123,107 @@ margin-bottom:10px;
 
 
 
-
-/* Galeri */
-
-
-.gallery{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-
-gap:20px;
-
-margin-top:30px;
-
-}
+/* İstasyon sistemi */
 
 
-
-
-.photo{
+.station-box{
 
 background:#1e1e1e;
 
+padding:25px;
+
 border-radius:15px;
 
-overflow:hidden;
-
-border-left:5px solid #ff4a57;
+border-left:5px solid #555;
 
 }
 
 
 
-.photo img{
+.station-title{
 
-width:100%;
-
-height:220px;
-
-object-fit:cover;
-
-}
-
-
-
-.photo p{
+font-size:22px;
 
 padding:15px;
 
-color:#ddd;
+cursor:pointer;
+
+border-radius:8px;
+
+margin-bottom:10px;
+
+}
+
+
+
+.station-title:hover{
+
+background:#ff4a57;
+
+}
+
+
+
+.station-list{
+
+display:none;
+
+margin-top:15px;
+
+}
+
+
+
+.station-button{
+
+background:#181818;
+
+padding:15px;
+
+margin-bottom:10px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+border-left:4px solid #555;
+
+}
+
+
+
+.station-button:hover{
+
+background:#333;
+
+border-left-color:#ff4a57;
+
+}
+
+
+
+
+.photos{
+
+display:none;
+
+margin-top:20px;
+
+}
+
+
+
+.photos img{
+
+width:260px;
+
+height:180px;
+
+object-fit:cover;
+
+border-radius:12px;
+
+margin:10px;
 
 }
 
@@ -209,7 +231,6 @@ color:#ddd;
 
 
 @media(max-width:800px){
-
 
 .sidebar{
 
@@ -228,8 +249,8 @@ margin-left:0;
 
 }
 
-
 }
+
 
 </style>
 
@@ -237,7 +258,9 @@ margin-left:0;
 </head>
 
 
+
 <body>
+
 
 
 
@@ -270,49 +293,9 @@ Güzergâh
 </a>
 
 
-
-
-<a onclick="toggleMenu()">
-
-Saha Fotoğrafları Arşivi ▾
-
+<a href="insaat.html">
+Saha Fotoğrafları Arşivi
 </a>
-
-
-
-<div class="station-list" id="station-list">
-
-
-<a href="emek.html">
-Emek
-</a>
-
-
-<a href="#">
-Sarıgazi
-</a>
-
-
-<a href="#">
-Aydınlar
-</a>
-
-
-<a href="#">
-Cumhuriyet
-</a>
-
-
-<a href="#">
-Yenidoğan
-</a>
-
-
-
-</div>
-
-
-
 
 
 <a href="takvim.html">
@@ -325,13 +308,10 @@ Belgeler
 </a>
 
 
-
 </div>
 
 
 </div>
-
-
 
 
 
@@ -350,7 +330,7 @@ Saha Fotoğrafları Arşivi
 
 
 <p>
-M13 Yenidoğan - Söğütlüçeşme Metro Hattı inşaat sürecine ait istasyon bazlı fotoğraf arşivi.
+M13 Yenidoğan - Söğütlüçeşme Metro Hattı istasyon bazlı inşaat fotoğrafları.
 </p>
 
 
@@ -358,10 +338,136 @@ M13 Yenidoğan - Söğütlüçeşme Metro Hattı inşaat sürecine ait istasyon 
 
 
 
-<h2>
-Bir istasyon seçerek saha fotoğraflarına ulaşabilirsiniz.
-</h2>
 
+
+<div class="station-box">
+
+
+
+<div class="station-title" onclick="openStations()">
+
+1. Etap İstasyonları ▾
+
+</div>
+
+
+
+<div class="station-list" id="stations">
+
+
+<div class="station-button" onclick="showPhotos('emek')">
+
+Emek
+
+</div>
+
+
+
+<div id="emek" class="photos">
+
+
+<img src="images/foto1.jpeg">
+
+<img src="images/foto2.jpeg">
+
+<img src="images/foto3.jpeg">
+
+<img src="images/foto4.jpeg">
+
+<img src="images/foto5.jpeg">
+
+<img src="images/foto6.jpeg">
+
+<img src="images/foto7.jpeg">
+
+
+</div>
+
+
+
+
+
+<div class="station-button" onclick="showPhotos('sarigazi')">
+
+Sarıgazi
+
+</div>
+
+
+<div id="sarigazi" class="photos">
+
+<p>
+Henüz fotoğraf eklenmedi.
+</p>
+
+</div>
+
+
+
+
+
+
+<div class="station-button" onclick="showPhotos('aydinlar')">
+
+Aydınlar
+
+</div>
+
+
+<div id="aydinlar" class="photos">
+
+<p>
+Henüz fotoğraf eklenmedi.
+</p>
+
+</div>
+
+
+
+
+
+
+<div class="station-button" onclick="showPhotos('cumhuriyet')">
+
+Cumhuriyet
+
+</div>
+
+
+<div id="cumhuriyet" class="photos">
+
+<p>
+Henüz fotoğraf eklenmedi.
+</p>
+
+</div>
+
+
+
+
+
+
+<div class="station-button" onclick="showPhotos('yenidogan')">
+
+Yenidoğan
+
+</div>
+
+
+<div id="yenidogan" class="photos">
+
+<p>
+Henüz fotoğraf eklenmedi.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</div>
 
 
 
@@ -374,10 +480,9 @@ Bir istasyon seçerek saha fotoğraflarına ulaşabilirsiniz.
 <script>
 
 
-function toggleMenu(){
+function openStations(){
 
-
-let menu=document.getElementById("station-list");
+let menu=document.getElementById("stations");
 
 
 if(menu.style.display==="block"){
@@ -392,11 +497,32 @@ menu.style.display="block";
 
 }
 
+}
+
+
+
+function showPhotos(id){
+
+
+let photos=document.querySelectorAll(".photos");
+
+
+photos.forEach(function(photo){
+
+photo.style.display="none";
+
+});
+
+
+document.getElementById(id).style.display="block";
+
 
 }
 
 
+
 </script>
+
 
 
 
