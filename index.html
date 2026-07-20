@@ -1,112 +1,183 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>M13 Metro Arşivi</title>
 
+
 <style>
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
+
 body {
-    background: #111827;
-    color: white;
+
+    background:#121212;
+    color:white;
+
 }
+
 
 
 /* Sol Menü */
+
 .sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 260px;
-    height: 100vh;
-    background: #1f2937;
-    padding: 25px;
-    border-right: 3px solid #00a6ff;
+
+    position:fixed;
+    left:0;
+    top:0;
+    width:260px;
+    height:100vh;
+
+    background:#1e1e1e;
+
+    padding:25px;
+
+    border-right:3px solid #ff4a57;
+
 }
 
+
+
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 35px;
-    color: #00a6ff;
+
+    font-size:24px;
+    font-weight:bold;
+
+    color:#ff4a57;
+
+    margin-bottom:35px;
+
 }
+
 
 
 .menu a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    transition: 0.3s;
+
+    display:block;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px;
+
+    margin-bottom:10px;
+
+    border-radius:8px;
+
+    transition:0.3s;
+
 }
+
 
 
 .menu a:hover {
-    background: #00a6ff;
-    color: black;
+
+    background:#ff4a57;
+
+    color:white;
+
 }
 
 
-/* Ana içerik */
+
+
+/* İçerik */
 
 .content {
-    margin-left: 260px;
-    padding: 40px;
+
+    margin-left:260px;
+
+    padding:40px;
+
 }
+
+
+
 
 
 .hero {
-    background: linear-gradient(135deg,#1e40af,#00a6ff);
+
+    background:linear-gradient(135deg,#ff4a57,#8f1d2c);
+
     padding:50px;
+
     border-radius:15px;
+
     margin-bottom:30px;
+
 }
+
+
 
 
 .hero h1 {
+
     font-size:38px;
+
     margin-bottom:15px;
+
 }
+
 
 
 
 .card-container {
 
     display:grid;
+
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
     gap:20px;
 
 }
 
 
 
+
+
 .card {
 
-    background:#1f2937;
+    background:#1e1e1e;
+
     padding:25px;
+
     border-radius:15px;
-    border-left:5px solid #00a6ff;
+
+    border-left:5px solid #ff4a57;
 
 }
+
 
 
 
 .card h2 {
 
+    color:#ff4a57;
+
     margin-bottom:10px;
-    color:#00a6ff;
 
 }
+
+
+
+
+.card p {
+
+    color:#cccccc;
+
+}
+
 
 
 
@@ -114,56 +185,77 @@ body {
 
 @media(max-width:800px){
 
-.sidebar{
+
+.sidebar {
 
     position:relative;
+
     width:100%;
+
     height:auto;
 
 }
 
 
-.content{
+.content {
 
     margin-left:0;
 
 }
 
+
 }
+
 
 </style>
 
+
 </head>
+
 
 
 <body>
 
 
+
 <div class="sidebar">
 
+
 <div class="logo">
+
 🚇 M13 Arşivi
+
 </div>
+
 
 
 <div class="menu">
 
+
 <a href="index.html">⌂ Ana Sayfa</a>
+
 
 <a href="guzergah.html">🗺 Güzergâh</a>
 
+
 <a href="istasyonlar.html">🚉 İstasyonlar</a>
+
 
 <a href="insaat.html">🏗 Güncel İnşaat Fotoğrafları</a>
 
+
 <a href="takvim.html">📅 Proje Takvimi</a>
+
 
 <a href="belgeler.html">📄 Belgeler</a>
 
+
 </div>
 
 
 </div>
+
+
 
 
 
@@ -171,24 +263,40 @@ body {
 <div class="content">
 
 
+
 <div class="hero">
 
+
 <h1>
+
 M13 Yenidoğan - Söğütlüçeşme Metro Hattı
+
 </h1>
 
+
+
 <p>
+
 İstanbul Anadolu Yakası'nın önemli raylı sistem projelerinden biri.
+
 </p>
+
 
 </div>
 
 
 
 
-<h2>Son Güncellemeler</h2>
+
+<h2>
+
+Son Güncellemeler
+
+</h2>
+
 
 <br>
+
 
 
 
@@ -196,48 +304,87 @@ M13 Yenidoğan - Söğütlüçeşme Metro Hattı
 
 
 
-<div class="card">
-
-<h2>🚉 Emek İstasyonu</h2>
-
-<p>
-14 Temmuz 2026
-    Emek İstasyonunda TBM montajı Yapıldığına dair bilgi edinildi
-</p>
-
-</div>
-
 
 
 <div class="card">
 
-<h2>🚇 Sarıgazi İstasyonu</h2>
+
+<h2>
+
+🚉 Emek İstasyonu
+
+</h2>
+
 
 <p>
-İstasyon yapısı ve tünel çalışmaları tamamlandı.
+
+Kazı çalışmaları ve güncel ilerleme bilgileri.
+
 </p>
 
+
 </div>
+
+
 
 
 
 
 <div class="card">
 
-<h2>🚇 Aydınlar</h2>
+
+<h2>
+
+🚇 Sarıgazi İstasyonu
+
+</h2>
+
 
 <p>
-Şantiye sahası olucağı öngörülen alanda ot temizliği yapılmış devamında alana çakıl serilmiştir.
+
+İstasyon yapısı ve tünel çalışmaları.
+
 </p>
 
-</div>
-
 
 </div>
 
 
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+
+📸 İnşaat Fotoğrafları
+
+</h2>
+
+
+<p>
+
+Şantiye görüntüleri ve tarih sıralı arşiv.
+
+</p>
+
+
 </div>
+
+
+
+
+</div>
+
+
+
+</div>
+
 
 
 </body>
+
 </html>
