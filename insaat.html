@@ -624,28 +624,38 @@ menu.style.display="block";
 
 function showPhotos(id){
 
-
-let photos=document.querySelectorAll(".photos");
-
+let selected = document.getElementById(id);
 
 
-photos.forEach(function(photo){
+// Aynı istasyona tekrar basılırsa kapat
 
-photo.style.display="none";
+if(selected.style.display === "block"){
 
-});
+    selected.style.display = "none";
 
-
-
-document.getElementById(id).style.display="block";
-
+    return;
 
 }
 
 
+// Diğer istasyonları kapat
+
+let photos = document.querySelectorAll(".photos");
 
 
+photos.forEach(function(photo){
 
+    photo.style.display = "none";
+
+});
+
+
+// Seçilen istasyonu aç
+
+selected.style.display = "block";
+
+  
+}
 
 
 // Galeri sistemi
