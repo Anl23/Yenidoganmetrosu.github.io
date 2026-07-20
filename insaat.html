@@ -328,274 +328,8 @@ M13 Yenidoğan - Söğütlüçeşme Metro Hattı istasyon bazlı inşaat fotoğr
 
 
 
-<!DOCTYPE html>
-<html lang="tr">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>M13 Saha Fotoğrafları Arşivi</title>
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:#121212;
-color:white;
-}
-
-
-/* Yan Menü */
-
-.sidebar{
-position:fixed;
-left:0;
-top:0;
-width:260px;
-height:100vh;
-background:#1e1e1e;
-padding:25px;
-border-right:3px solid #ff4a57;
-}
-
-
-.logo{
-font-size:24px;
-font-weight:bold;
-color:#ff4a57;
-margin-bottom:35px;
-}
-
-
-.menu a{
-display:block;
-color:white;
-text-decoration:none;
-padding:15px;
-margin-bottom:10px;
-border-radius:8px;
-}
-
-
-.menu a:hover{
-background:#ff4a57;
-}
-
-
-
-/* İçerik */
-
-.content{
-margin-left:260px;
-padding:40px;
-}
-
-
-.hero{
-background:linear-gradient(135deg,#ff4a57,#8f1d2c);
-padding:45px;
-border-radius:15px;
-margin-bottom:30px;
-}
-
-
-.hero h1{
-font-size:36px;
-margin-bottom:10px;
-}
-
-
-
-/* İstasyon */
-
-.station-box{
-background:#1e1e1e;
-padding:25px;
-border-radius:15px;
-border-left:5px solid #555;
-}
-
-
-.station-title{
-font-size:22px;
-padding:15px;
-cursor:pointer;
-border-radius:8px;
-}
-
-
-.station-title:hover{
-background:#ff4a57;
-}
-
-
-.station-list{
-display:none;
-margin-top:20px;
-}
-
-
-.station-button{
-background:#181818;
-padding:15px;
-margin-bottom:10px;
-border-radius:8px;
-cursor:pointer;
-border-left:4px solid #555;
-}
-
-
-.station-button:hover{
-background:#333;
-border-left-color:#ff4a57;
-}
-
-
-
-/* Fotoğraf */
-
-.photos{
-display:none;
-margin-top:20px;
-}
-
-
-.photos img{
-width:220px;
-height:150px;
-object-fit:cover;
-border-radius:12px;
-margin:8px;
-cursor:pointer;
-transition:.3s;
-}
-
-
-.photos img:hover{
-transform:scale(1.05);
-}
-
-
-
-/* Büyük fotoğraf */
-
-.lightbox{
-
-display:none;
-position:fixed;
-z-index:999;
-left:0;
-top:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.9);
-align-items:center;
-justify-content:center;
-
-}
-
-
-.lightbox img{
-
-max-width:80%;
-max-height:80%;
-border-radius:15px;
-
-}
-
-
-.close{
-
-position:absolute;
-top:20px;
-right:40px;
-font-size:45px;
-cursor:pointer;
-
-}
-
-
-.prev,.next{
-
-position:absolute;
-top:50%;
-font-size:50px;
-cursor:pointer;
-
-}
-
-
-.prev{
-left:40px;
-}
-
-
-.next{
-right:40px;
-}
-
-
-</style>
-
-</head>
-
-
-<body>
-
-
-<div class="sidebar">
-
-<div class="logo">
-M13 Arşivi
-</div>
-
-
-<div class="menu">
-
-<a href="index.html">Ana Sayfa</a>
-
-<a href="guzergah.html">Güzergâh</a>
-
-<a href="istasyonlar.html">İstasyonlar</a>
-
-<a href="insaat.html">Saha Fotoğrafları Arşivi</a>
-
-<a href="takvim.html">Proje Takvimi</a>
-
-<a href="belgeler.html">Belgeler</a>
-
-</div>
-
-</div>
-
-
-
-<div class="content">
-
-
-<div class="hero">
-
-<h1>
-Saha Fotoğrafları Arşivi
-</h1>
-
-<p>
-M13 Yenidoğan - Söğütlüçeşme Metro Hattı inşaat fotoğrafları.
-</p>
-
-</div>
-
-
-
 <div class="station-box">
+
 
 
 <div class="station-title" onclick="openStations()">
@@ -605,7 +339,11 @@ M13 Yenidoğan - Söğütlüçeşme Metro Hattı inşaat fotoğrafları.
 </div>
 
 
+
 <div class="station-list" id="stations">
+
+
+
 
 
 <div class="station-button" onclick="showPhotos('emek')">
@@ -615,15 +353,24 @@ Emek
 
 <div id="emek" class="photos">
 
-<img src="images/foto1.jpeg">
-<img src="images/foto2.jpeg">
-<img src="images/foto3.jpeg">
-<img src="images/foto4.jpeg">
-<img src="images/foto5.jpeg">
-<img src="images/foto6.jpeg">
-<img src="images/foto7.jpeg">
-<img src="images/foto8.jpeg">
-<img src="images/foto9.jpeg">
+<img src="images/emek1.jpeg">
+<img src="images/emek2.jpeg">
+<img src="images/emek3.jpeg">
+<img src="images/emek4.jpeg">
+<img src="images/emek5.jpeg">
+<img src="images/emek6.jpeg">
+<img src="images/emek7.jpeg">
+
+<img src="images/emek8.jpeg">
+<img src="images/emek9.jpeg">
+<img src="images/emek10.jpeg">
+<img src="images/emek11.jpeg">
+<img src="images/emek12.jpeg">
+<img src="images/emek13.jpeg">
+<img src="images/emek14.jpeg">
+<img src="images/emek15.jpeg">
+<img src="images/emek16.jpeg">
+<img src="images/emek17.jpeg">
 
 </div>
 
