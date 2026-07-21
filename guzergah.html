@@ -6,32 +6,43 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>M13 1.Etap Yenidoğan - Emek Arası Güzergâh</title>
+<title>M13 Metro Arşivi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
 
 <style>
 
-* {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
-
-body {
-    background:#121212;
-    color:white;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
 
-/* Sol Menü */
+body{
+
+background:#111111;
+
+color:white;
+
+}
+
+
+
+/* Menü */
 
 .sidebar{
 
 position:fixed;
+
 left:0;
+
 top:0;
 
 width:260px;
+
 height:100vh;
 
 background:#181818;
@@ -45,6 +56,7 @@ padding:25px;
 .logo{
 
 font-size:24px;
+
 font-weight:bold;
 
 color:#ff4a57;
@@ -84,60 +96,156 @@ color:#ff4a57;
 }
 
 
+
+
 /* İçerik */
 
-.content {
-    margin-left:260px;
-    padding:40px;
+
+.content{
+
+margin-left:260px;
+
+padding:40px;
+
 }
 
 
-.box {
-    background:#1e1e1e;
-    padding:30px;
-    border-radius:15px;
-    border-left:5px solid #ff4a57;
+
+/* Ana başlık */
+
+
+.hero{
+
+padding:20px 0;
+
+margin-bottom:40px;
+
 }
 
 
-h1 {
-    color:#ff4a57;
-    margin-bottom:20px;
+
+.hero h1{
+
+font-family:'Montserrat',sans-serif;
+
+font-size:38px;
+
+font-weight:700;
+
+color:white;
+
+margin-bottom:15px;
+
 }
 
 
-.route {
-    margin-top:25px;
-    font-size:20px;
+
+.hero p{
+
+color:#aaaaaa;
+
+font-size:17px;
+
+line-height:1.6;
+
 }
 
 
-.route span {
-    color:#ff4a57;
+
+
+/* Kartlar */
+
+
+.card-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+
 }
 
 
-img {
-    width:100%;
-    max-width:900px;
-    border-radius:15px;
-    margin-top:25px;
+
+.card{
+
+background:#1a1a1a;
+
+padding:25px;
+
+border-radius:12px;
+
+border:1px solid #2b2b2b;
+
 }
+
+
+
+.card h2{
+
+color:#ff4a57;
+
+font-size:22px;
+
+margin-bottom:15px;
+
+}
+
+
+
+.card p{
+
+color:#aaaaaa;
+
+line-height:1.6;
+
+margin-bottom:8px;
+
+}
+
+
+
+.green{
+
+color:#9acd9a !important;
+
+}
+
+
+
+.gray{
+
+color:#999999 !important;
+
+}
+
+
 
 
 @media(max-width:800px){
 
-.sidebar {
-    position:relative;
-    width:100%;
-    height:auto;
+
+.sidebar{
+
+position:relative;
+
+width:100%;
+
+height:auto;
+
 }
 
-.content {
-    margin-left:0;
-}
+
+.content{
+
+margin-left:0;
 
 }
+
+
+}
+
 
 </style>
 
@@ -147,14 +255,20 @@ img {
 <body>
 
 
+
 <div class="sidebar">
 
+
 <div class="logo">
+
 M13 Arşivi
+
 </div>
 
 
+
 <div class="menu">
+
 
 <a href="index.html">Ana Sayfa</a>
 
@@ -168,40 +282,252 @@ M13 Arşivi
 
 <a href="belgeler.html">Teknik Dökümanlar</a>
 
-</div>
 
 </div>
+
+
+</div>
+
+
 
 
 
 <div class="content">
 
-<div class="box">
+
+
+<div class="hero">
+
 
 <h1>
-M13 1. Etap Yenidoğan - Emek Arası Güzergâh
+
+M13 Yenidoğan - Söğütlüçeşme Metro Hattı
+
 </h1>
 
+
 <p>
-M13 Yenidoğan - Söğütlüçeşme Metro Hattı'nın ilk etabında yer alan istasyonlar ve güzergâh bilgileri.
+
+İstanbul Anadolu Yakası'nın önemli raylı sistem projelerinden biri.
+
 </p>
 
 
-<div class="route">
+</div>
 
-<span>Emek</span> →
-<span>Sarıgazi</span> →
-<span>Aydınlar</span> →
-<span>Cumhuriyet</span> →
-<span>Yenidoğan</span>
+
+
+
+
+<h2>
+
+Hat Bilgileri
+
+</h2>
+
+
+<br>
+
+
+
+<div class="card-container">
+
+
+
+<div class="card">
+
+
+<h2>
+
+Hat Uzunluğu
+
+</h2>
+
+
+<p>
+
+<strong>Toplam:</strong> 24.6 km
+
+</p>
+
+
+<p class="green">
+
+<strong>İnşa halinde:</strong> 6.6 km
+
+</p>
+
+
+<p class="gray">
+
+<strong>Proje halinde:</strong> 18 km
+
+</p>
+
 
 </div>
 
 
-<img src="images/m13-guzergah.jpg" alt="M13 Güzergah Haritası">
+
+
+
+<div class="card">
+
+
+<h2>
+
+Teknik Bilgiler
+
+</h2>
+
+
+<p>
+
+<strong>Hat açıklığı:</strong> 1435 mm
+
+</p>
 
 
 </div>
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+
+Yolcu ve Takvim
+
+</h2>
+
+
+<p>
+
+<strong>Öngörülen yolcu sayısı (tüm hat):</strong> 425.660
+
+</p>
+
+
+<p>
+
+<strong>Öngörülen açılış tarihi (1. Etap):</strong> 2029
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<br><br>
+
+
+
+<h2>
+
+Son Güncellemeler
+
+</h2>
+
+
+<br>
+
+
+
+
+<div class="card-container">
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+
+Emek İstasyonu
+
+</h2>
+
+
+<p>
+
+14 Temmuz 2026 tarihinde şantiyede vinç ve kamyon sayısında artış gözlemlendiği, TBM montajına yönelik hazırlıkların başladığı bilgisi alınmıştır.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+
+Aydınlar İstasyonu
+
+</h2>
+
+
+<p>
+
+İstasyon sahasında ot biçme ve zemin hazırlığı çalışmalarının yapıldığı gözlemlenmiştir.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+
+Saha Fotoğrafları Arşivi
+
+</h2>
+
+
+<p>
+
+M13 hattının inşaat sürecine ait güncel ve tarihsel fotoğraf kayıtları.
+
+</p>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
 
 </div>
 
