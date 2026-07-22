@@ -1,1 +1,56 @@
-
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Teknik Dökümanlar</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#121212;color:#fff}
+.sidebar{position:fixed;left:0;top:0;width:260px;height:100vh;background:#181818;padding:25px}
+.logo{font-size:24px;font-weight:bold;color:#ff4a57;margin-bottom:35px}
+.menu a{display:block;color:#fff;text-decoration:none;padding:15px;margin-bottom:10px;border-radius:8px;transition:.3s;border-left:3px solid transparent}
+.menu a:hover{background:#2a2a2a;color:#ff4a57}
+.menu a.active{background:#333;border-left:3px solid #ff4a57}
+.content{margin-left:260px;padding:40px}
+.hero h1{font-family:'Montserrat',sans-serif;font-size:38px}
+.hero p{margin-top:10px;color:#cfcfcf}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin-top:35px}
+.card{background:#1e1e1e;border-radius:14px;overflow:hidden}
+.card img{width:100%;height:220px;object-fit:cover;cursor:pointer}
+.card p{padding:14px;color:#9f9f9f;line-height:1.5}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);align-items:center;justify-content:center;z-index:999}
+.lightbox img{max-width:85%;max-height:85%}
+.close,.prev,.next{position:absolute;color:#fff;font-size:42px;cursor:pointer}
+.close{top:20px;right:35px}.prev{left:25px;top:50%}.next{right:25px;top:50%}
+</style></head>
+<body>
+<div class="sidebar">
+<div class="logo">M13 Arşivi</div>
+<div class="menu">
+<a href="index.html">Ana Sayfa</a>
+<a href="guzergah.html">Güzergâh</a>
+<a href="istasyonlar.html">İstasyonlar</a>
+<a href="insaat.html">Saha Fotoğrafları Arşivi</a>
+<a href="tarihce.html">Hattın Tarihçesi</a>
+<a class="active" href="belgeler.html">Teknik Dökümanlar</a>
+<a href="inseski.html">Eski İnşaat Fotoğrafları</a>
+</div></div>
+<div class="content">
+<div class="hero">
+<h1>Teknik Dökümanlar</h1>
+<p>M13 Yenidoğan - Söğütlüçeşme Metro Hattı'na ait teknik çizimler, planlar ve görseller.</p>
+</div>
+<div class="gallery">
+<div class="card"><img src="images/dokuman1.jpeg" onclick="openLB(0)"><p>Döküman 1 açıklaması buraya yazılacaktır.</p></div><div class="card"><img src="images/dokuman2.jpeg" onclick="openLB(1)"><p>Döküman 2 açıklaması buraya yazılacaktır.</p></div><div class="card"><img src="images/dokuman3.jpeg" onclick="openLB(2)"><p>Döküman 3 açıklaması buraya yazılacaktır.</p></div><div class="card"><img src="images/dokuman4.jpeg" onclick="openLB(3)"><p>Döküman 4 açıklaması buraya yazılacaktır.</p></div><div class="card"><img src="images/dokuman5.jpeg" onclick="openLB(4)"><p>Döküman 5 açıklaması buraya yazılacaktır.</p></div><div class="card"><img src="images/dokuman6.jpeg" onclick="openLB(5)"><p>Döküman 6 açıklaması buraya yazılacaktır.</p></div><div class="card"><img src="images/dokuman7.jpeg" onclick="openLB(6)"><p>Döküman 7 açıklaması buraya yazılacaktır.</p></div><div class="card"><img src="images/dokuman8.jpeg" onclick="openLB(7)"><p>Döküman 8 açıklaması buraya yazılacaktır.</p></div><div class="card"><img src="images/dokuman9.jpeg" onclick="openLB(8)"><p>Döküman 9 açıklaması buraya yazılacaktır.</p></div><div class="card"><img src="images/dokuman10.jpeg" onclick="openLB(9)"><p>Döküman 10 açıklaması buraya yazılacaktır.</p></div>
+</div></div>
+<div class="lightbox" id="lb"><span class="close" onclick="closeLB()">&times;</span><span class="prev" onclick="chg(-1)">❮</span><img id="lbimg"><span class="next" onclick="chg(1)">❯</span></div>
+<script>
+const imgs=[...Array(10)].map((_,i)=>`images/dokuman${i+1}.jpeg`);let idx=0;
+function openLB(i){idx=i;lb.style.display='flex';lbimg.src=imgs[idx]}
+function closeLB(){lb.style.display='none'}
+function chg(d){idx=(idx+d+imgs.length)%imgs.length;lbimg.src=imgs[idx]}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLB()})
+</script>
+</body></html>
